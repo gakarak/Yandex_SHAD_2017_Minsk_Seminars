@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 ###############################
 if __name__ == '__main__':
-    fimg = 'img/doge2.jpg'
+    fimg = '../img/doge2.jpg'
     img  = skio.imread(fimg)
     #
     plt.subplot(2, 2, 1)
