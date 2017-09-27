@@ -1,0 +1,3 @@
+*.tar
+/brodatz_dataset/
+/brodatz_dataset_test_submit.csv-pred.csv
