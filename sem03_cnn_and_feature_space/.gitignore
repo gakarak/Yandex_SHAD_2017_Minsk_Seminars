@@ -1,0 +1,4 @@
+/model_MNIST-logdir/
+*.csv
+*.h5
+*.pyc
