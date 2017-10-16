@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 if __name__ == '__main__':
     sift = cv2.xfeatures2d.SIFT_create()
-    pathImgs = glob.glob('data/highways/*.jpg')
+    pathImgs = glob.glob('../img/sem05/highways/*.jpg')
     numImgs  = len(pathImgs)
     for ii, ipath in enumerate(pathImgs):
         timgC = cv2.imread(ipath, cv2.IMREAD_COLOR)

@@ -58,7 +58,7 @@ def_sizePatch=32
 
 ######################################
 if __name__=='__main__':
-    lstF=glob.glob('data/highways/*.jpg')
+    lstF=glob.glob('../img/sem05/highways/*.jpg')
     # sift=cv2.SIFT(nfeatures=def_NumFeaturesPerImage)
     sift=cv2.xfeatures2d.SIFT_create(nfeatures=def_NumFeaturesPerImage)
     lstK=[]
