@@ -115,8 +115,8 @@ def data_generator_simple(pathCSV, numCls, batchSize=4, pimgSize=256):
 
 ################################################
 if __name__ == '__main__':
-    fidxTrn = '/home/ar/data/test_dataset_0/idx.txt-train.txt'
-    fidxVal = '/home/ar/data/test_dataset_0/idx.txt-val.txt'
+    fidxTrn = '../img/sem04/idx.txt-train.txt'
+    fidxVal = '../img/sem04/idx.txt-val.txt'
     numCls  = 5
     imgSiz  = 256
     imgShp  = (imgSiz, imgSiz, 3)
