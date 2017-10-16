@@ -70,6 +70,14 @@ if __name__ == '__main__':
         tret = model.predict_on_batch(np.expand_dims(datax, axis=0))
         tretProb = tret[0].reshape(list(tsiz) + [tret.shape[-1]])
         tretMsk  = np.argmax(tretProb, axis=-1)
-
+        tmskGT = np.argmax(datay, axis=-1).reshape(tsiz)
+        #
+        plt.subplot(1, 3, 1)
+        plt.imshow( ((datax + 1.0)*127.5).astype(np.uint8) )
+        plt.subplot(1, 3, 2)
+        plt.imshow( tretMsk )
+        plt.subplot(1, 3, 3)
+        plt.imshow(tmskGT)
+        plt.show()
         print ('[{}/{}]'.format(ii, numSamples))
 
