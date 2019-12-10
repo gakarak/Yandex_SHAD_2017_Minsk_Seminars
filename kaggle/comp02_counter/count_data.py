@@ -194,27 +194,7 @@ def main_debug_dataset():
     logging.basicConfig(level=logging.INFO)
     path_idx = '/home/ar/data/yshad-2019/corn_seed_counting_train_v2_clean/idx-val.txt'
     dir_batches = path_idx + '_batches'
-
     generate_validation_set(path_idx)
-
-    # dir_batches = path_idx + '_batches'
-    # os.makedirs(dir_batches, exist_ok=True)
-    # #
-    # dataset = CountDataset(path_idx=path_idx,
-    #                        in_memory=False,
-    #                        dataset_size=10000000000).build()
-    # dataloader = DataLoader(dataset, batch_size=1, num_workers=8, worker_init_fn=worker_init_fn_random)
-    # #
-    # for xi, x in enumerate(dataset):
-    # # for xi, x in enumerate(dataloader):
-    #     # logging.info('[{}] -> {}'.format(xi, x['idx']))
-    #     # plt.subplot(1, 2, 1)
-    #     # plt.imshow(x['img'])
-    #     # plt.subplot(1, 2, 2)
-    #     # plt.imshow(x['msk'])
-    #     # plt.show()
-    #
-    #     print('-')
 
 
 if __name__ == '__main__':
