@@ -13,7 +13,7 @@ def count_parameters(model):
 
 
 def main_test():
-    model = smp.Unet('resnet34', encoder_weights=None)
+    model = smp.Unet('resnet34', encoder_weights=None, activation=None)
 
     print('-')
 
