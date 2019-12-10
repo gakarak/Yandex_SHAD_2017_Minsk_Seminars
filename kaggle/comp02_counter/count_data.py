@@ -69,6 +69,7 @@ def get_random_crop_img(sample: dict, rnd_angles: tuple, rnd_scales: tuple, crop
 def _load_batch_sample(path_sample: str) -> dict:
     with open(path_sample, 'rb') as f:
         ret = pkl.load(f)
+    ret = {x: y[0] for x, y in ret.items()}
     return ret
 
 
