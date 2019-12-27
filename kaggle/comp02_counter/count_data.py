@@ -100,7 +100,7 @@ class CountDataset_Validation(Dataset):
 
 class CountDataset(Dataset):
 
-    def __init__(self, path_idx: str, in_memory=True, dataset_size=400, crop_size: int = 256):
+    def __init__(self, path_idx: str, in_memory=True, dataset_size=100, crop_size: int = 256):
         self.path_idx = path_idx
         self.wdir = os.path.dirname(self.path_idx)
         self.data_idx = pd.read_csv(self.path_idx)
@@ -185,8 +185,8 @@ def generate_validation_set(path_idx: str, num_batches=200):
         x = next(dataloader_iter)
         path_batch = path_batch_tmpl.format(xi)
         batch = {x: y.cpu().numpy() for x, y in x.items()}
-        with open(path_batch, 'wb') as f:
-            pkl.dump(batch, f)
+        # with open(path_batch, 'wb') as f:
+        #     pkl.dump(batch, f)
         if (xi % 20) == 0:
             logging.info('[{}/{}] <- {}'.format(xi, num_batches_end, path_batch))
 
