@@ -23,3 +23,5 @@ scipy
 urllib3
 tensorflow-cpu
 keras
+torch
+torchvision

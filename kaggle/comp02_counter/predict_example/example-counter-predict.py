@@ -24,7 +24,7 @@ def main_run(path_idx: str, model_dir: str):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-i', '--idx', type=str, required=True, help='path to index file')
-    parser.add_argument('-m', '--model_dir', type=str, required=True, help='directory with model and model-data')
+    parser.add_argument('-m', '--model_dir', type=str, required=False, help='directory with model and model-data')
     args = parser.parse_args()
     logging.info('args = {}'.format(args))
     main_run(
